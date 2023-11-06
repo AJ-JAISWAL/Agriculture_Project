@@ -4,7 +4,7 @@ import numpy as np
 
 model = pd.read_pickle('soil_fertility_model.pkl')
 crop = pd.read_pickle('crop_grown_model.pkl')
-group=pd.read_pickle('grouped.pkl')
+group=pd.read_pickle('group.pkl')
 data_soil=pd.read_pickle('data_soil.pkl')
 new_data_soil=pd.read_pickle('new_data_soil.pkl')
 data=pd.read_pickle('data.pkl')
@@ -345,5 +345,3 @@ if nav == "Farming_By_AJ_Tech":
         top_indices = np.argpartition(similarity_scores, -4)[-4:]
         for idx in top_indices:
             st.write(idx,new_data_soil[idx].reshape(1, 4))
-
-        pass
